@@ -1,0 +1,157 @@
+/* Design Tokens */
+:root {
+    --red: #FF2B2B;
+    --white: #FFFFFF;
+    --ink: #111111;
+    --muted: #6B7280;
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Inter', Arial, sans-serif;
+}
+
+/* Configure Tailwind with custom colors */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Typography */
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+/* Custom Tailwind Classes */
+.text-red { color: var(--red); }
+.bg-red { background-color: var(--red); }
+.border-red { border-color: var(--red); }
+.text-ink { color: var(--ink); }
+.bg-ink { background-color: var(--ink); }
+.text-muted { color: var(--muted); }
+
+/* Container */
+.container {
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Header Shadow on Scroll */
+.header-scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 9999px;
+    min-height: 44px;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: color-mix(in srgb, var(--red) 90%, black);
+}
+
+.btn-secondary {
+    border: 2px solid var(--red);
+    color: var(--red);
+    border-radius: 9999px;
+    min-height: 44px;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+/* Focus States */
+*:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Background Image Fallbacks */
+.why-choose-bg {
+    background-image: linear-gradient(135deg, var(--ink) 0%, var(--red) 100%);
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mobile-menu-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Service Card Hover Effects */
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Case Study Overlay */
+.case-study-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* Client Logo Effects */
+.client-logo {
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Horizontal Scroll for Mobile Clients */
+.horizontal-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — RedPen Comms</title>
+    <meta name="description" content="We are a creative digital agency. At RedPen, we share a mutual objective with our clients to get seen, heard and remembered.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About — RedPen Comms">
+    <meta property="og:description" content="We are a creative digital agency. At RedPen, we share a mutual objective with our clients to get seen, heard and remembered.">
+    <meta property="og:image" content="assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/my-favicon.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-ink">
+    <!-- Header -->
+    <header id="header" class="sticky top-0 bg-white z-50 transition-shadow duration-300">
+        <div class="container mx-auto px-4 md:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="/assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-8 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-ink hover:text-red transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-red font-medium">About</a>
+                    <a href="contact.html" class="text-ink hover:text-red transition-colors font-medium">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button 
+                    id="mobile-menu-button" 
+                    class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    aria-label="Toggle navigation menu"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="index.html" class="text-ink hover:text-red transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-red font-medium">About</a>
+                    <a href="contact.html" class="text-ink hover:text-red transition-colors font-medium">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Intro Section -->
+        <section class="py-16 md:py-24 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        
+                        <h1 class="text-4xl md:text-5xl font-bold text-ink mb-8 uppercase tracking-tight leading-tight">
+                            We Are A Creative Digital Agency
+                        </h1>
+                        
+                        <div class="space-y-6 text-lg text-muted">
+                            <p>
+                                At Redpen, we share a mutual objective with our client understand the need to get seen, heard and remembered.
+                            </p>
+                            
+                            <p>
+                                Whether it's market research, campaign strategy, social media management, events or brand identity, we do more than make your brand look good. We make you unforgettable.
+                            </p>
+                            
+                            <p>
+                                We've worked across industries, timelines, and budgets and one thing remains the same: your brand wants to be seen, heard, and remembered. We know how to do that.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <img src="/assets/about-photo-1.jpg" alt="RedPen Comms team at work" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                        
+                        <img src="/assets/about-photo-2.jpg" alt="Creative work in progress" class="w-3/4 h-48 object-cover rounded-2xl shadow-lg ml-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-ink mb-16 uppercase tracking-tight">
+                    What We Do
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="/assets/service-1.svg" alt="Event marketing icon" class="w-12 h-12 mb-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">Event Marketing & Publicity</h3>
+                        <p class="text-muted">Know the market. Own the message.</p>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="/assets/service-2.svg" alt="Social media icon" class="w-12 h-12 mb-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">Social Media Management</h3>
+                        <p class="text-muted">Moments, Movements & Memories.</p>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="/assets/service-3.svg" alt="Branding icon" class="w-12 h-12 mb-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">Branding & Visual Identity</h3>
+                        <p class="text-muted">Your reputation at a glance.</p>
+                    </div>
+                    
+                    <!-- Service Card 4 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="/assets/service-4.svg" alt="Market research icon" class="w-12 h-12 mb-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">Market Research</h3>
+                        <p class="text-muted">Clear signals. Better decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Band -->
+        <section class="bg-red text-white py-12">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">About</h3>
+                        <p class="text-white/90">
+                            We are a creative digital agency that helps brands get seen, heard, and remembered through strategic marketing and compelling visual storytelling.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Get in Touch</h3>
+                        <div class="space-y-2 text-white/90">
+                            <p>📧 workwithredpen@gmail.com</p>
+                            <p>📞 +233 54 857 8655</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-4">
+                    <img src="/assets/footer-image.png" alt="RedPen Comms Logo" class="h-6 w-auto">
+                    <p class="text-sm text-white/80">© 2025 RedPen Comms. All rights reserved.</p>
+                </div>
+                
+                <nav class="flex space-x-6">
+                    <a href="index.html" class="text-white/80 hover:text-white transition-colors text-sm">Home</a>
+                    <a href="about.html" class="text-white/80 hover:text-white transition-colors text-sm">About</a>
+                    <a href="contact.html" class="text-white/80 hover:text-white transition-colors text-sm">Contact</a>
+                    <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Privacy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

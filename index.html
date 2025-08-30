@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedPen Comms — Website</title>
+    <meta name="description" content="Get Seen. Get Heard. Get Known. Get Remembered. Creative digital agency specializing in event marketing, social media, branding, and market research.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="RedPen Comms — Website">
+    <meta property="og:description" content="Get Seen. Get Heard. Get Known. Get Remembered. Creative digital agency specializing in event marketing, social media, branding, and market research.">
+    <meta property="og:image" content="assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/my-favicon.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-ink">
+    <!-- Header -->
+    <header id="header" class="sticky top-0 bg-white z-50 transition-shadow duration-300">
+        <div class="container mx-auto px-4 md:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="/assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-8 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-ink hover:text-red transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-ink hover:text-red transition-colors font-medium">About</a>
+                    <a href="contact.html" class="text-ink hover:text-red transition-colors font-medium">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button 
+                    id="mobile-menu-button" 
+                    class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    aria-label="Toggle navigation menu"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="index.html" class="text-ink hover:text-red transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-ink hover:text-red transition-colors font-medium">About</a>
+                    <a href="contact.html" class="text-ink hover:text-red transition-colors font-medium">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero-section" class="py-16 md:py-24 bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center justify-center text-white relative overflow-hidden transition-all duration-1000 ease-in-out" style="background-image: url('/assets/hero-image.jpg');">
+            <!-- Dark overlay for text readability -->
+            <div class="absolute inset-0 bg-black/50"></div>
+            
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="relative z-10 text-center max-w-4xl mx-auto">
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tight">
+                        Imagine | Experience | Remember
+                    </h1>
+                    <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                        Get Seen. Get Heard. Get Known. Get Remembered
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="bg-red text-white px-8 py-3 rounded-full font-bold hover:bg-red/90 transition-colors min-h-[44px] flex items-center justify-center">
+                            Talk to Us
+                        </a>
+                        <a href="#what-we-do" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-ink transition-colors min-h-[44px] flex items-center justify-center">
+                            What We Do
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section id="what-we-do" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-ink mb-16 uppercase tracking-tight">
+                    What We Do
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="/assets/service-1.svg" alt="Event marketing icon" class="w-12 h-12 mb-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">Event Marketing & Publicity</h3>
+                        <p class="text-muted mb-4">Know the market. Own the message.</p>
+                        <a href="about.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="/assets/service-2.svg" alt="Social media icon" class="w-12 h-12 mb-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">Social Media Management</h3>
+                        <p class="text-muted mb-4">Moments, Movements & Memories.</p>
+                        <a href="about.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="/assets/service-3.svg" alt="Branding icon" class="w-12 h-12 mb-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">Branding & Visual Identity</h3>
+                        <p class="text-muted mb-4">Your reputation at a glance.</p>
+                        <a href="about.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
+                    </div>
+                    
+                    <!-- Service Card 4 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="/assets/service-4.svg" alt="Market research icon" class="w-12 h-12 mb-4">
+                        <h3 class="text-xl font-bold text-ink mb-2">Market Research</h3>
+                        <p class="text-muted mb-4">Clear signals. Better decisions.</p>
+                        <a href="about.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-16 md:py-24 bg-cover bg-center bg-no-repeat min-h-[400px] flex items-center text-white relative bg-[url('/assets/why-choose-us.jpg')]">
+            <!-- Dark overlay for text readability -->
+            <div class="absolute inset-0 bg-black/60"></div>
+            
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="relative z-10 max-w-3xl mx-auto text-center lg:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
+                        Why Choose RedPen?
+                    </h2>
+                    <p class="text-lg text-white/90 mb-6">
+                        We don't just create campaigns—we craft experiences that resonate. Our team combines strategic thinking with creative execution to ensure your brand doesn't just get noticed, but gets remembered.
+                    </p>
+                    <p class="text-lg text-white/90 mb-8">
+                        From startups to established brands, we've helped businesses across industries tell their stories in ways that matter.
+                    </p>
+                    
+                    <!-- Supported by logos -->
+                    <div class="border-t border-white/20 pt-6">
+                        <p class="text-sm text-white/80 mb-4 uppercase tracking-wide">Trusted by</p>
+                        <div class="flex flex-wrap gap-4 opacity-60 justify-center lg:justify-start">
+                            <!-- TODO: replace with actual client logos -->
+                            <div class="w-16 h-8 bg-white/20 rounded"></div>
+                            <div class="w-16 h-8 bg-white/20 rounded"></div>
+                            <div class="w-16 h-8 bg-white/20 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Section -->
+        <section id="case-study" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-ink mb-16 uppercase tracking-tight">
+                    Case Study
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Case Study 1 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+                        <img src="/assets/case-1.jpg" alt="Photography project case study" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <span class="bg-red text-white px-3 py-1 rounded-full text-sm font-bold">Photography</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white font-bold text-lg">View Case Study</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 2 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+                        <img src="/assets/case-2.jpg" alt="Brand design project case study" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <span class="bg-red text-white px-3 py-1 rounded-full text-sm font-bold">Brand Designs</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white font-bold text-lg">View Case Study</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 3 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+                        <img src="/assets/case-3.jpg" alt="Event marketing project case study" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <span class="bg-red text-white px-3 py-1 rounded-full text-sm font-bold">Event Marketing</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-white font-bold text-lg">View Case Study</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Clients Section -->
+        <section id="clients" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-ink mb-4 uppercase tracking-tight">
+                    Our Clients
+                </h2>
+                <p class="text-center text-muted mb-12">Trusted by</p>
+                
+                <!-- Mobile: Horizontal scroll -->
+                <div class="md:hidden overflow-x-auto pb-4">
+                    <div class="flex space-x-8 min-w-max px-4">
+                        <div class="flex-shrink-0 text-center">
+                            <img src="/assets/client-1.png" alt="Client 1 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                            <p class="text-sm text-muted mt-2">Steamina</p>
+                        </div>
+                        <div class="flex-shrink-0 text-center">
+                            <img src="/assets/client-2.png" alt="Client 2 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                            <p class="text-sm text-muted mt-2">Jambox</p>
+                        </div>
+                        <div class="flex-shrink-0 text-center">
+                            <img src="/assets/client-3.png" alt="Client 3 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                            <p class="text-sm text-muted mt-2">Beanie Brain</p>
+                        </div>
+                        <div class="flex-shrink-0 text-center">
+                            <img src="/assets/client-4.png" alt="Client 4 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                            <p class="text-sm text-muted mt-2">Gibs Agro</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop: Grid -->
+                <div class="hidden md:grid grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+                    <div class="text-center">
+                        <img src="/assets/client-1.png" alt="Client 1 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                        <p class="text-sm text-muted mt-2">Steamina</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="/assets/client-2.png" alt="Client 2 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                        <p class="text-sm text-muted mt-2">Jambox</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="/assets/client-3.png" alt="Client 3 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                        <p class="text-sm text-muted mt-2">Beanie Brain</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="/assets/client-4.png" alt="Client 4 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                        <p class="text-sm text-muted mt-2">Gibs Agro</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="/assets/client-5.png" alt="Client 5 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                        <p class="text-sm text-muted mt-2">Vicesh</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="/assets/client-6.png" alt="Client 6 logo" class="w-20 h-20 rounded-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-300 mx-auto">
+                        <p class="text-sm text-muted mt-2">Franco Feedmill</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Band -->
+        <section class="bg-red text-white py-12">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">About</h3>
+                        <p class="text-white/90">
+                            We are a creative digital agency that helps brands get seen, heard, and remembered through strategic marketing and compelling visual storytelling.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Get in Touch</h3>
+                        <div class="space-y-2 text-white/90">
+                            <p>📧 workwithredpen@gmail.com</p>
+                            <p>📞 +233 54 857 8655</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-4">
+                    <img src="/assets/footer-image.png" alt="RedPen Comms Logo" class="h-6 w-auto">
+                    <p class="text-sm text-white/80">© 2025 RedPen Comms. All rights reserved.</p>
+                </div>
+                
+                <nav class="flex space-x-6">
+                    <a href="index.html" class="text-white/80 hover:text-white transition-colors text-sm">Home</a>
+                    <a href="about.html" class="text-white/80 hover:text-white transition-colors text-sm">About</a>
+                    <a href="contact.html" class="text-white/80 hover:text-white transition-colors text-sm">Contact</a>
+                    <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Privacy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
