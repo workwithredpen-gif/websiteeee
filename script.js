@@ -110,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hero Background Slideshow
     const heroSection = document.getElementById('hero-section');
     if (heroSection) {
-        console.log('Hero section found, initializing slideshow.');
-        
         const heroImages = [
             '/assets/hero-image.jpg',
             '/assets/hero-image-2.jpg',
@@ -122,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         function updateHeroBackground() {
             const currentImage = heroImages[currentImageIndex];
-            console.log('Attempting to set background to:', currentImage);
             heroSection.style.backgroundImage = `url('${currentImage}')`;
             
             // Move to next image, loop back to start if at end
@@ -134,7 +131,5 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Change background every 7 seconds
         setInterval(updateHeroBackground, 7000);
-    } else {
-        console.log('Hero section not found on this page.');
     }
 });
