@@ -14,7 +14,7 @@
     --white: #FFFFFF;
     --ink: #111111;
     --muted: #6B7280;
-    --font-heading: 'Orbin black ITC TT';
+    --font-heading: 'Orbin black ITC TT', sans-serif;
     --font-body: 'Inter', Arial, sans-serif;
 }
 
