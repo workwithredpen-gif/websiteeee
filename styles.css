@@ -1,10 +1,20 @@
+@font-face {
+    font-family: 'Orbin black ITC TT'; /* Choose a name for your font */
+    src: url('/assets/fonts/your-font-file.woff2') format('woff2'), /* Path to your WOFF2 file */
+         url('/assets/fonts/your-font-file.woff') format('woff'),   /* Path to your WOFF file */
+         url('/assets/fonts/your-font-file.ttf') format('truetype'); /* Path to your TTF file */
+    font-weight: normal; /* Or specify the weight, e.g., 400, 700 */
+    font-style: normal;
+    font-display: swap; /* Ensures text remains visible during font load */
+}
+
 /* Design Tokens */
 :root {
     --red: #FF2B2B;
     --white: #FFFFFF;
     --ink: #111111;
     --muted: #6B7280;
-    --font-heading: 'Oswald', sans-serif;
+    --font-heading: 'Orbin black ITC TT', sans-serif;
     --font-body: 'Inter', Arial, sans-serif;
 }
 
