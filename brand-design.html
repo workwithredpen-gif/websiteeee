@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-ink">
-  <!-- Header -->
+    <!-- Header -->
     <header id="header" class="sticky top-0 bg-white z-50 transition-shadow duration-300">
         <div class="container mx-auto px-4 md:px-8 py-0">
             <div class="flex items-center justify-between relative h-20">
@@ -18,13 +18,41 @@
                         <img src="/assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-40 w-auto">
                     </a>
                 </div>
-      <nav class="flex space-x-6">
-        <a href="index.html" class="hover:text-red">Home</a>
-        <a href="about.html" class="hover:text-red">About</a>
-        <a href="contact.html" class="hover:text-red">Contact</a>
-      </nav>
-    </div>
-  </header>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 ml-auto">
+    <a href="index.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Home</a>
+    <a href="about.html" class="text-lg text-red font-medium">About</a>
+    <a href="contact.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Contact</a>
+</nav>
+
+
+
+                
+                <!-- Mobile Menu Button -->
+                <button 
+                    id="mobile-menu-button" 
+                    class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors relative z-10 ml-auto"
+                    aria-label="Toggle navigation menu"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="index.html" class="text-ink hover:text-red transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-red font-medium">About</a>
+                    <a href="contact.html" class="text-ink hover:text-red transition-colors font-medium">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
   <!-- Hero Section -->
   <section class="py-16 bg-gray-50 text-center">
