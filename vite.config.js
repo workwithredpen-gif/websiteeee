@@ -3,18 +3,16 @@ import { resolve } from 'path'
 
 export default defineConfig({
   base: '/',
-  base: '/',
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'about.html'),
-        contact: resolve(__dirname, 'contact.html')
+        contact: resolve(__dirname, 'contact.html'),
+        brandDesign: resolve(__dirname, 'brand-design.html') // Add this line
       }
     }
   },
-  // Ensure assets are properly handled
   assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.png', '**/*.svg', '**/*.gif', '**/*.webp'],
-  // Configure public directory
   publicDir: 'public'
 })
