@@ -1,120 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brand Design Case Study — RedPen Comms</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tailwind (optional CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon (relative path) -->
+  <link rel="icon" href="assets/myfavicon.png" type="image/png" />
 </head>
 <body class="bg-white text-ink">
 
-  <!-- Favicon -->
-    <link rel="icon" href="/assets/myfavicon.png" type="image/png">
-  
-    <!-- Header -->
-    <header id="header" class="sticky top-0 bg-white z-50 transition-shadow duration-300">
-        <div class="container mx-auto px-4 md:px-8 py-0">
-            <div class="flex items-center justify-between relative h-20">
-                <!-- Logo -->
-                <div class="absolute left-0 top-1/2 -translate-y-1/2">
-                    <a href="index.html">
-                        <img src="/assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-40 w-auto">
-                    </a>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8 ml-auto">
-    <a href="index.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Home</a>
-    <a href="about.html" class="text-lg text-red font-medium">About</a>
-    <a href="contact.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Contact</a>
-</nav>
-
-
-                <!-- Mobile Menu Button -->
-                <button 
-                    id="mobile-menu-button" 
-                    class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors relative z-10 ml-auto"
-                    aria-label="Toggle navigation menu"
-                    aria-controls="mobile-menu"
-                    aria-expanded="false"
-                >
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <!-- Mobile Navigation -->
-            <nav id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
-                <div class="flex flex-col space-y-4 pt-4">
-                    <a href="index.html" class="text-ink hover:text-red transition-colors font-medium">Home</a>
-                    <a href="about.html" class="text-red font-medium">About</a>
-                    <a href="contact.html" class="text-ink hover:text-red transition-colors font-medium">Contact</a>
-                </div>
-            </nav>
+  <!-- Header -->
+  <header id="header" class="sticky top-0 bg-white z-50 transition-shadow duration-300">
+    <div class="container mx-auto px-4 md:px-8 py-0">
+      <div class="flex items-center justify-between relative h-20">
+        <div class="absolute left-0 top-1/2 -translate-y-1/2">
+          <a href="index.html">
+            <img src="assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-40 w-auto">
+          </a>
         </div>
-    </header>
 
-  <!-- Hero Section -->
+        <nav class="hidden md:flex space-x-8 ml-auto">
+          <a href="index.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Home</a>
+          <a href="about.html" class="text-lg text-red font-medium">About</a>
+          <a href="contact.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Contact</a>
+        </nav>
+
+        <!-- Mobile -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors relative z-10 ml-auto"
+                aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
+        <div class="flex flex-col space-y-4 pt-4">
+          <a href="index.html" class="text-ink hover:text-red transition-colors font-medium">Home</a>
+          <a href="about.html" class="text-red font-medium">About</a>
+          <a href="contact.html" class="text-ink hover:text-red transition-colors font-medium">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
   <section class="py-16 bg-gray-50 text-center">
     <h1 class="text-4xl font-bold mb-4">Brand Design Case Study</h1>
     <p class="text-lg text-gray-600">Showcasing our creative visual identity and branding work.</p>
   </section>
 
-  <!-- Case Study Showcase -->
+  <!-- Gallery -->
   <section class="py-16 container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Replace with your actual designs -->
-      <img src="/assets/anfanioyals.jpg" alt="Brand design sample 1" class="rounded-xl shadow-md hover:scale-105 transition">
-      <img src="/assets/Farmetrics.jpg" alt="Brand design sample 2" class="rounded-xl shadow-md hover:scale-105 transition">
-      <img src="/assets/nakidesigns.jpg" alt="Brand design sample 3" class="rounded-xl shadow-md hover:scale-105 transition">
-      <img src="/assets/Passion.jpg" alt="Brand design sample 4" class="rounded-xl shadow-md hover:scale-105 transition">
+      <img src="assets/anfanioyals.jpg" alt="Brand design sample 1" class="rounded-xl shadow-md hover:scale-105 transition">
+      <img src="assets/farmetrics.jpg" alt="Brand design sample 2" class="rounded-xl shadow-md hover:scale-105 transition">
+      <img src="assets/nakidesigns.jpg" alt="Brand design sample 3" class="rounded-xl shadow-md hover:scale-105 transition">
+      <img src="assets/passion.jpg" alt="Brand design sample 4" class="rounded-xl shadow-md hover:scale-105 transition">
     </div>
   </section>
 
-  <!-- Footer Band -->
-        <section class="bg-red text-white py-12">
-            <div class="container mx-auto px-4 md:px-8">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">About</h3>
-                        <p class="text-white/90">
-                            We are a creative digital agency that helps brands get seen, heard, and remembered through strategic marketing and compelling visual storytelling.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Get in Touch</h3>
-                        <div class="space-y-2 text-white/90">
-    <p>📧 workwithredpen@gmail.com</p>
-    <p>📞 +233 20 578 9341</p>
-    <p>📞 <a href="tel:+233 54 857 8655" class="text-white/90 hover:text-white transition-colors">+233 54 857 8655</a></p>
-</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    <!-- Footer -->
-    <footer class="bg-ink text-white py-8">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div class="flex items-center space-x-4">
-                    <img src="/assets/footer-image.png" alt="RedPen Comms Logo" class="h-12 w-12">
-                    <p class="text-sm text-white/80">© 2025 RedPen Comms. All rights reserved.</p>
-                </div>
-                
-                <nav class="flex space-x-6">
-                    <a href="index.html" class="text-white/80 hover:text-white transition-colors text-sm">Home</a>
-                    <a href="about.html" class="text-white/80 hover:text-white transition-colors text-sm">About</a>
-                    <a href="contact.html" class="text-white/80 hover:text-white transition-colors text-sm">Contact</a>
-                    <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Privacy</a>
-                </nav>
-            </div>
+  <!-- Footer band -->
+  <section class="bg-red text-white py-12">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">About</h3>
+          <p class="text-white/90">
+            We are a creative digital agency that helps brands get seen, heard, and remembered through strategic marketing and compelling visual storytelling.
+          </p>
         </div>
-    </footer>
+        <div>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Get in Touch</h3>
+          <div class="space-y-2 text-white/90">
+            <p>📧 workwithredpen@gmail.com</p>
+            <p>📞 +233 20 578 9341</p>
+            <p>📞 <a href="tel:+233548578655" class="text-white/90 hover:text-white transition-colors">+233 54 857 8655</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="/js/script.js" defer></script>
+  <!-- Footer -->
+  <footer class="bg-ink text-white py-8">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="flex items-center space-x-4">
+          <img src="assets/footer-image.png" alt="RedPen Comms Logo" class="h-12 w-12">
+          <p class="text-sm text-white/80">© 2025 RedPen Comms. All rights reserved.</p>
+        </div>
+
+        <nav class="flex space-x-6">
+          <a href="index.html" class="text-white/80 hover:text-white transition-colors text-sm">Home</a>
+          <a href="about.html" class="text-white/80 hover:text-white transition-colors text-sm">About</a>
+          <a href="contact.html" class="text-white/80 hover:text-white transition-colors text-sm">Contact</a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Privacy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Local JS (relative path) -->
+  <script src="js/script.js" defer></script>
 </body>
 </html>
-
