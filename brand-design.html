@@ -9,11 +9,15 @@
 </head>
 <body class="bg-white text-ink">
   <!-- Header -->
-  <header class="bg-gray-100 py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="index.html">
-        <img src="/assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-40 w-auto">
-      </a>
+    <header id="header" class="sticky top-0 bg-white z-50 transition-shadow duration-300">
+        <div class="container mx-auto px-4 md:px-8 py-0">
+            <div class="flex items-center justify-between relative h-20">
+                <!-- Logo -->
+                <div class="absolute left-0 top-1/2 -translate-y-1/2">
+                    <a href="index.html">
+                        <img src="/assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-40 w-auto">
+                    </a>
+                </div>
       <nav class="flex space-x-6">
         <a href="index.html" class="hover:text-red">Home</a>
         <a href="about.html" class="hover:text-red">About</a>
