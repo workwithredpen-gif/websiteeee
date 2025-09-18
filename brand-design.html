@@ -2,27 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Brand Design Showcase</title>
-  <link rel="stylesheet" href="style.css"> <!-- link to your main CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Design Case Study — RedPen Comms</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Brand Design Case Study</h1>
+<body class="bg-white text-ink">
+  <!-- Header -->
+  <header class="bg-gray-100 py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="index.html">
+        <img src="/assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-12 w-auto">
+      </a>
+      <nav class="flex space-x-6">
+        <a href="index.html" class="hover:text-red">Home</a>
+        <a href="about.html" class="hover:text-red">About</a>
+        <a href="contact.html" class="hover:text-red">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="intro">
-    <p>This page showcases the brand design work I have created. It includes mockups, logo explorations, and visual identity elements.</p>
+  <!-- Hero Section -->
+  <section class="py-16 bg-gray-50 text-center">
+    <h1 class="text-4xl font-bold mb-4">Brand Design Case Study</h1>
+    <p class="text-lg text-gray-600">Showcasing our creative visual identity and branding work.</p>
   </section>
 
-  <section class="gallery">
-    <h2>Design Examples</h2>
-    <img src="anfanioyals.jpg" alt="Logo Design Example">
-    <img src="Farmetrics.jpg" alt="Brand Mockup Example">
-    <img src="nakidesigns.jpg" alt="Color Palette">
+  <!-- Case Study Showcase -->
+  <section class="py-16 container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Replace with your actual designs -->
+      <img src="/assets/brand-design-1.jpg" alt="Brand design sample 1" class="rounded-xl shadow-md hover:scale-105 transition">
+      <img src="/assets/brand-design-2.jpg" alt="Brand design sample 2" class="rounded-xl shadow-md hover:scale-105 transition">
+      <img src="/assets/brand-design-3.jpg" alt="Brand design sample 3" class="rounded-xl shadow-md hover:scale-105 transition">
+    </div>
   </section>
 
-  <footer>
-    <a href="index.html">⬅ Back to Home</a>
+  <!-- Footer -->
+  <footer class="bg-ink text-white py-8 text-center">
+    <p class="text-sm">&copy; 2025 RedPen Comms. All rights reserved.</p>
   </footer>
 </body>
 </html>
