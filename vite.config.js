@@ -9,7 +9,9 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'about.html'),
         contact: resolve(__dirname, 'contact.html'),
-        brandDesign: resolve(__dirname, 'brand-design.html') // Add this line
+        brandDesign: resolve(__dirname, 'brand-design.html'),
+        eventmarketing: resolve(__dirname, 'event-marketing.htmlt'),
+        "// Add this line
       }
     }
   },
