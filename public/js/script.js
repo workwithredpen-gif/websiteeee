@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroSection = document.getElementById('hero-section');
     if (heroSection) {
         const heroImages = [
-            '/assets/hero-image.jpg',
-            '/assets/hero-image-2.jpg',
-            '/assets/hero-image-3.jpg'
+            '/assets/hero-image.webp',
+            '/assets/hero-image2.webp',
+            '/assets/hero-image3.webp.webp'
         ];
         
         let currentImageIndex = 0;
