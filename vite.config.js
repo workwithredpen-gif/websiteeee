@@ -15,7 +15,8 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         brandDesign: resolve(__dirname, 'brand-design.html'),
         eventmarketing: resolve(__dirname, 'event-marketing.html'),
-        photography: resolve(__dirname, 'photography.html')
+        photography: resolve(__dirname, 'photography.html'),
+        webDevelopment: resolve(__dirname, 'web-development.html')
 
       }
     }
