@@ -1,0 +1,21 @@
+
+> vite-starter@0.0.0 build
+> vite build
+
+[36mvite v5.4.19 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 6 modules transformed.
+[31mx[39m Build failed in 413ms
+[31merror during build:
+[31m[@tailwindcss/vite:generate:build] Could not resolve value for theme function: `theme(fontFamily.body)`. Consider checking if the path is correct or provide a fallback value to silence this error.[31m
+file: [36mC:/Users/LENOVO/Desktop/Work/Website/Redpen comms/codebase/websiteeee/styles.css[31m
+    at Object.kn [as theme] (file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:13:4834)
+    at file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:13:5515
+    at br (file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:3:1718)
+    at I (file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:3:1377)
+    at Lr (file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:13:5407)
+    at file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:13:5179
+    at br (file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:3:1718)
+    at I (file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:3:1377)
+    at De (file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:13:5104)
+    at Wi (file:///C:/Users/LENOVO/Desktop/Work/Website/Redpen%20comms/codebase/websiteeee/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:38:283)[39m

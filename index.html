@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedPen Comms — Website</title>
-    <meta name="description" content="Get Seen. Get Heard. Get Known. Get Remembered. Creative digital agency specializing in event marketing, social media, branding, and market research.">
-    
+    <meta name="description"
+        content="Get Seen. Get Heard. Get Known. Get Remembered. Creative digital agency specializing in event marketing, social media, branding, and market research.">
+
     <!-- Open Graph -->
     <meta property="og:title" content="RedPen Comms — Website">
-    <meta property="og:description" content="Get Seen. Get Heard. Get Known. Get Remembered. Creative digital agency specializing in event marketing, social media, branding, and market research.">
+    <meta property="og:description"
+        content="Get Seen. Get Heard. Get Known. Get Remembered. Creative digital agency specializing in event marketing, social media, branding, and market research.">
     <meta property="og:image" content="assets/og-image.jpg">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="assets/myfavicon.png" type="image/png">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-white text-ink">
     <!-- Header -->
     <header id="header" class="sticky top-0 bg-gray-100 z-50 transition-shadow duration-300">
@@ -36,27 +41,25 @@
                         <img src="assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-40 w-auto">
                     </a>
                 </div>
-                
+
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8 ml-auto">
-    <a href="index.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Home</a>
-    <a href="about.html" class="text-lg text-ink hover:text-red transition-colors font-medium">About</a>
-    <a href="contact.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Contact</a>
-</nav>
+                    <a href="index.html" class="text-lg text-ink hover:text-red transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-lg text-ink hover:text-red transition-colors font-medium">About</a>
+                    <a href="contact.html"
+                        class="text-lg text-ink hover:text-red transition-colors font-medium">Contact</a>
+                </nav>
                 <!-- Mobile Menu Button -->
-                <button 
-                    id="mobile-menu-button" 
+                <button id="mobile-menu-button"
                     class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors relative z-10 ml-auto"
-                    aria-label="Toggle navigation menu"
-                    aria-controls="mobile-menu"
-                    aria-expanded="false"
-                >
+                    aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            
+
             <!-- Mobile Navigation -->
             <nav id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-gray-200">
                 <div class="flex flex-col space-y-4 pt-4">
@@ -70,25 +73,29 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero-section" class="py-16 md:py-24 bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center justify-center text-white relative overflow-hidden transition-all duration-1000 ease-in-out" style="background-image: url('assets/hero-image.webp');">
+        <section id="hero-section"
+            class="py-16 md:py-24 bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center justify-center text-white relative overflow-hidden transition-all duration-1000 ease-in-out"
+            style="background-image: url('https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719799/hero-image_h8u9vj.jpg');">
             <!-- Dark overlay for text readability -->
             <div class="absolute inset-0 bg-black/50"></div>
-            
+
             <div class="container mx-auto px-4 md:px-8">
                 <div class="relative z-10 text-center max-w-4xl mx-auto">
-                    
+
                     <h1 class="text-xl md:text-4xl xl:text-5xl font-bold text-white mb-10 uppercase tracking-tight">
                         Imagine | Experience | Remember
                     </h1>
                     <p class="text-sm sm:text-base xl:text-3xl text-white/90 mb-8">
                         Get Seen. Get Heard. Get Known. Get Remembered
                     </p>
-                    
+
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="contact.html" class="bg-red text-white px-8 py-3 rounded-full font-bold hover:bg-red/90 transition-colors min-h-[44px] flex items-center justify-center">
+                        <a href="contact.html"
+                            class="bg-red text-white px-8 py-3 rounded-full font-bold hover:bg-red/90 transition-colors min-h-[44px] flex items-center justify-center">
                             Talk to Us
                         </a>
-                        <a href="#what-we-do" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-ink transition-colors min-h-[44px] flex items-center justify-center">
+                        <a href="#what-we-do"
+                            class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-ink transition-colors min-h-[44px] flex items-center justify-center">
                             What We Do
                         </a>
                     </div>
@@ -102,58 +109,89 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-ink mb-16 uppercase tracking-tight">
                     What We Do
                 </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
                     <!-- Service Card 1 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
-                        <img src="assets/service-1.svg" alt="Event marketing icon" class="w-12 h-12 mb-4">
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719955/service-1_fbyatz.svg"
+                            alt="Event marketing icon" class="w-12 h-12 mb-4">
                         <h3 class="text-xl font-bold text-ink mb-2">Event Marketing & Publicity</h3>
                         <p class="text-muted mb-4">Know the market. Own the message.</p>
-                        <a href="event-marketing.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
+                        <a href="event-marketing.html"
+                            class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
                     </div>
-                    
+
                     <!-- Service Card 2 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
-                        <img src="assets/service-2.svg" alt="Social media icon" class="w-12 h-12 mb-4">
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719955/service-2_vd1bge.svg"
+                            alt="Social media icon" class="w-12 h-12 mb-4">
                         <h3 class="text-xl font-bold text-ink mb-2">Social Media Management</h3>
                         <p class="text-muted mb-4">Moments, Movements & Memories.</p>
-                        <a href="event-marketing.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
+                        <a href="event-marketing.html"
+                            class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
                     </div>
-                    
+
                     <!-- Service Card 3 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
-                        <img src="assets/service-3.svg" alt="Branding icon" class="w-12 h-12 mb-4">
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719955/service-3_kjxmrj.svg"
+                            alt="Branding icon" class="w-12 h-12 mb-4">
                         <h3 class="text-xl font-bold text-ink mb-2">Branding & Visual Identity</h3>
                         <p class="text-muted mb-4">Your reputation at a glance.</p>
-                        <a href="brand-design.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
+                        <a href="brand-design.html"
+                            class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
                     </div>
-                    
+
                     <!-- Service Card 4 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
-                        <img src="assets/service-4.svg" alt="Market research icon" class="w-12 h-12 mb-4">
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719963/service-4_fujwoo.svg"
+                            alt="Market research icon" class="w-12 h-12 mb-4">
                         <h3 class="text-xl font-bold text-ink mb-2">Market Research</h3>
                         <p class="text-muted mb-4">Clear signals. Better decisions.</p>
-                        <a href="about.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn more</a>
+                        <a href="about.html" class="text-red hover:text-red/80 font-medium transition-colors">Learn
+                            more</a>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red hover:shadow-xl hover:border-red/80 transition-all duration-300 focus-within:outline-2 focus-within:outline-red focus-within:outline-offset-2">
+                        <!-- Inline SVG for Web Development -->
+                        <svg class="w-12 h-12 mb-4 text-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                        <h3 class="text-xl font-bold text-ink mb-2">Web Development & Apps</h3>
+                        <p class="text-muted mb-4">Digital experiences that perform.</p>
+                        <a href="web-development.html"
+                            class="text-red hover:text-red/80 font-medium transition-colors">Learn
+                            more</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Us Section -->
-        <section class="py-16 md:py-24 bg-cover bg-center bg-no-repeat min-h-[400px] flex items-center text-white relative bg-[url('/assets/why-choose-us.jpg')]">
+        <section
+            class="py-16 md:py-24 bg-cover bg-center bg-no-repeat min-h-[400px] flex items-center text-white relative bg-[url('https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719972/why-choose-us_ayj7c1.jpg')]">
             <!-- Dark overlay for text readability -->
             <div class="absolute inset-0 bg-black/60"></div>
-            
+
             <div class="container mx-auto px-4 md:px-8">
                 <div class="relative z-10 max-w-3xl lg:text-left">
                     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-tight">
                         Why Choose RedPen?
                     </h2>
                     <p class="text-lg text-white/90 mb-6">
-                        We don't just create campaigns, we craft experiences that resonate. Our team combines strategic thinking with creative execution to ensure your brand doesn't just get noticed, but gets remembered.
+                        We don't just create campaigns, we craft experiences that resonate. Our team combines strategic
+                        thinking with creative execution to ensure your brand doesn't just get noticed, but gets
+                        remembered.
                     </p>
                     <p class="text-lg text-white/90 mb-8">
-                        From startups to established brands, we've helped businesses across industries tell their stories in ways that matter.
+                        From startups to established brands, we've helped businesses across industries tell their
+                        stories in ways that matter.
                     </p>
                 </div>
             </div>
@@ -165,41 +203,60 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-ink mb-16 uppercase tracking-tight">
                     Case Study
                 </h2>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full justify-items-center">
 
                     <!-- Case Study 1 -->
-                    <a href="photography.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex-shrink-0 w-80 h-80">
-                        <img src="assets/case-1.jpg" alt="Photography project case study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
+                    <a href="photography.html"
+                        class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex-shrink-0 w-80 h-80">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719796/case-1_wnmwk2.jpg"
+                            alt="Photography project case study"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
+                        </div>
                         <div class="absolute bottom-0 left-0 right-0 p-4">
                             <span class="bg-red text-white px-3 py-1 rounded-full text-sm font-bold">Photography</span>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <span class="text-white font-bold text-lg">View Case Study</span>
                         </div>
                     </a>
-                    
+
                     <!-- Case Study 2: Brand Designs -->
-                    <a href="brand-design.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex-shrink-0 w-80 h-80">
-                        <img src="assets/case-2.jpg" alt="Brand design project case study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <span class="bg-red text-white px-3 py-1 rounded-full text-sm font-bold">Brand Designs</span>
+                    <a href="brand-design.html"
+                        class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex-shrink-0 w-80 h-80">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719797/case-2_fm9jmx.png"
+                            alt="Brand design project case study"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <span class="bg-red text-white px-3 py-1 rounded-full text-sm font-bold">Brand
+                                Designs</span>
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <span class="text-white font-bold text-lg">View Case Study</span>
                         </div>
                     </a>
-                    
+
                     <!-- Case Study 3 -->
-                    <a href="event-marketing.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex-shrink-0 w-80 h-80">
-                        <img src="assets/case-3.jpg" alt="Event marketing project case study" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4">
-                            <span class="bg-red text-white px-3 py-1 rounded-full text-sm font-bold">Event Marketing</span>
+                    <a href="event-marketing.html"
+                        class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex-shrink-0 w-80 h-80">
+                        <img src="assets/case-3.jpg" alt="Event marketing project case study"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <span class="bg-red text-white px-3 py-1 rounded-full text-sm font-bold">Event
+                                Marketing</span>
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <span class="text-white font-bold text-lg">View Case Study</span>
                         </div>
                     </a>
@@ -207,76 +264,99 @@
             </div>
         </section>
 
-       <!-- Our Clients Section -->
-<section id="clients" class="py-16 md:py-24 bg-white overflow-hidden">
-  <div class="container mx-auto px-4 md:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-ink mb-8 uppercase tracking-tight text-center">
-      Our Clients
-    </h2>
+        <!-- Our Clients Section -->
+        <section id="clients" class="py-16 md:py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-ink mb-8 uppercase tracking-tight text-center">
+                    Our Clients
+                </h2>
 
-    <div class="relative overflow-hidden">
-      <!-- Scrolling Row -->
-      <div class="logo-slider flex items-center gap-12 animate-scroll">
-        <!-- Logos (duplicated for seamless loop) -->
-        <img src="assets/client-1.png" alt="Steamina logo" class="client-logo">
-        <img src="assets/client-2.png" alt="Jambox logo" class="client-logo">
-        <img src="assets/client-3.png" alt="Beanie Brain logo" class="client-logo">
-        <img src="assets/client-4.png" alt="Gibs Agro logo" class="client-logo">
-        <img src="assets/client-5.png" alt="Vicesh logo" class="client-logo">
-        <img src="assets/client-6.png" alt="Franco Feedmill logo" class="client-logo">
-        <img src="assets/farmmmmm.png" alt="Farmetrics logo" class="client-logo">
-        <img src="assets/opt.png" alt="Optimum Essential logo" class="client-logo">
-        <img src="assets/Pork Logo red.png" alt="Pork and More Catering Services logo" class="client-logo">
+                <div class="relative overflow-hidden">
+                    <!-- Scrolling Row -->
+                    <div class="logo-slider flex items-center gap-12 animate-scroll">
+                        <!-- Logos (duplicated for seamless loop) -->
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719795/client-1_pjtqq2.png"
+                            alt="Steamina logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719796/client-2_hv0w7c.png"
+                            alt="Jambox logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719795/client-3_g93p3w.png"
+                            alt="Beanie Brain logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719795/client-4_smstr0.png"
+                            alt="Gibs Agro logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719797/client-5_bsyezs.png"
+                            alt="Vicesh logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719797/client-6_f7nf4t.png"
+                            alt="Franco Feedmill logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719798/farmmmmm_kxgu6q.png"
+                            alt="Farmetrics logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719953/opt_nt4qnj.png"
+                            alt="Optimum Essential logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719954/Pork_Logo_red_ovxrbv.png"
+                            alt="Pork and More Catering Services logo" class="client-logo">
 
-        <!-- Duplicate set for infinite effect -->
-        <img src="assets/client-1.png" alt="Steamina logo" class="client-logo">
-        <img src="assets/client-2.png" alt="Jambox logo" class="client-logo">
-        <img src="assets/client-3.png" alt="Beanie Brain logo" class="client-logo">
-        <img src="assets/client-4.png" alt="Gibs Agro logo" class="client-logo">
-        <img src="assets/client-5.png" alt="Vicesh logo" class="client-logo">
-        <img src="assets/client-6.png" alt="Franco Feedmill logo" class="client-logo">
-        <img src="assets/farmmmmm.png" alt="Farmetrics logo" class="client-logo">
-        <img src="assets/opt.png" alt="Optimum Essential logo" class="client-logo">
-        <img src="assets/Pork Logo red.png" alt="Pork and More Catering Services logo" class="client-logo">
-      </div>
-    </div>
-  </div>
-</section>
+                        <!-- Duplicate set for infinite effect -->
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719795/client-1_pjtqq2.png"
+                            alt="Steamina logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719796/client-2_hv0w7c.png"
+                            alt="Jambox logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719795/client-3_g93p3w.png"
+                            alt="Beanie Brain logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719795/client-4_smstr0.png"
+                            alt="Gibs Agro logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719797/client-5_bsyezs.png"
+                            alt="Vicesh logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719797/client-6_f7nf4t.png"
+                            alt="Franco Feedmill logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719798/farmmmmm_kxgu6q.png"
+                            alt="Farmetrics logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719953/opt_nt4qnj.png"
+                            alt="Optimum Essential logo" class="client-logo">
+                        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719954/Pork_Logo_red_ovxrbv.png"
+                            alt="Pork and More Catering Services logo" class="client-logo">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- Add this style block either in your styles.css or right before </body> -->
-<style>
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+        <!-- Add this style block either in your styles.css or right before </body> -->
+        <style>
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
 
-  .logo-slider {
-    display: flex;
-    width: max-content;
-    animation: scroll 25s linear infinite;
-  }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
 
-  .client-logo {
-    width: 90px;
-    height: 90px;
-    border-radius: 9999px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: all 0.3s ease-in-out;
-  }
+            .logo-slider {
+                display: flex;
+                width: max-content;
+                animation: scroll 25s linear infinite;
+            }
 
-  .client-logo:hover {
-    filter: grayscale(0);
-    transform: scale(1.1);
-  }
+            .client-logo {
+                width: 90px;
+                height: 90px;
+                border-radius: 9999px;
+                object-fit: cover;
+                filter: grayscale(100%);
+                transition: all 0.3s ease-in-out;
+            }
 
-  @media (max-width: 768px) {
-    .client-logo {
-      width: 70px;
-      height: 70px;
-    }
-  }
-</style>
+            .client-logo:hover {
+                filter: grayscale(0);
+                transform: scale(1.1);
+            }
+
+            @media (max-width: 768px) {
+                .client-logo {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        </style>
 
         <!-- Footer Band -->
         <section class="bg-red text-white py-12">
@@ -285,30 +365,38 @@
                     <div>
                         <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">About</h3>
                         <p class="text-white/90">
-                            We are a creative digital agency that helps brands get seen, heard, and remembered through strategic marketing and compelling visual storytelling.
+                            We are a creative digital agency that helps brands get seen, heard, and remembered through
+                            strategic marketing and compelling visual storytelling.
                         </p>
                     </div>
                     <div>
                         <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Get in Touch</h3>
                         <div class="space-y-2 text-white/90">
-    <p>📧 workwithredpen@gmail.com</p>
-    <p>📞 +233 20 578 9341</p>
-    <p>📞 <a href="tel:+233 54 857 8655" class="text-white/90 hover:text-white transition-colors">+233 54 857 8655</a></p>
-</div>
-                                    <div class="flex space-x-4">
-    <a href="https://www.facebook.com/Redpen.Concepts" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white transition-colors">
-        <span class="sr-only">Facebook</span>
-        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6">
-            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-        </svg>
-    </a>
-    <a href="https://www.instagram.com/redpen.comms/?hl=en" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white transition-colors">
-        <span class="sr-only">Instagram</span>
-        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6">
-            <path fill-rule="evenodd" d="M12 2C8.49 2 7.97 2.01 6.98 2.05c-1.01.04-1.64.23-2.22.46-.6.24-1.1.58-1.59 1.07-.49.49-.83.99-1.07 1.59-.23.58-.42 1.21-.46 2.22-.04.99-.05 1.51-.05 5.01s.01 4.02.05 5.01c.04 1.01.23 1.64.46 2.22.24.6.58 1.1 1.07 1.59.49.49.99.83 1.59 1.07.58.23 1.21.42 2.22.46.99.04 1.51.05 5.01.05s4.02-.01 5.01-.05c1.01-.04 1.64-.23 2.22-.46.6-.24 1.1-.58 1.59-1.07.49-.49.83-.99 1.07-1.59.23-.58.42-1.21.46-2.22.04-.99.05-1.51.05-5.01s-.01-4.02-.05-5.01c-.04-1.01-.23-1.64-.46-2.22-.24-.6-.58-1.1-1.07-1.59-.49-.49-.99-.83-1.59-1.07-.58-.23-1.21-.42-2.22-.46-.99-.04-1.51-.05-5.01-.05zm0 2.16c3.2 0 3.58.01 4.85.05 1.1.04 1.79.22 2.22.39.47.18.8.39 1.16.75.36.36.57.69.75 1.16.17.43.35 1.12.39 2.22.04 1.27.05 1.65.05 4.85s-.01 3.58-.05 4.85c-.04 1.1-.22 1.79-.39 2.22-.18.47-.39.8-.75 1.16-.36.36-.69.57-1.16.75-.43.17-1.12.35-2.22.39-1.27.04-1.65.05-4.85.05s-3.58-.01-4.85-.05c-1.1-.04-1.79-.22-2.22-.39-.47-.18-.8-.39-1.16-.75-.36-.36-.57-.69-.75-1.16-.17-.43-.35-1.12-.39-2.22-.04-1.27-.05-1.65-.05-4.85s.01-3.58.05-4.85c.04-1.1.22-1.79.39-2.22.18-.47.39-.8.75-1.16.36-.36.69-.57 1.16-.75.43-.17 1.12-.35 2.22-.39 1.27-.04 1.65-.05 4.85-.05zm0 3.6c-2.42 0-4.38 1.96-4.38 4.38s1.96 4.38 4.38 4.38 4.38-1.96 4.38-4.38-1.96-4.38-4.38-4.38zm0 7.16c-1.53 0-2.78-1.25-2.78-2.78s1.25-2.78 2.78-2.78 2.78 1.25 2.78 2.78-1.25 2.78-2.78 2.78zm6.4-8.58c0 .58-.47 1.05-1.05 1.05s-1.05-.47-1.05-1.05.47-1.05 1.05-1.05 1.05.47 1.05 1.05z" clip-rule="evenodd" />
-        </svg>
-    </a>
-</div>
+                            <p>📧 workwithredpen@gmail.com</p>
+                            <p>📞 +233 20 578 9341</p>
+                            <p>📞 <a href="tel:+233 54 857 8655"
+                                    class="text-white/90 hover:text-white transition-colors">+233 54 857 8655</a></p>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/Redpen.Concepts" target="_blank" rel="noopener noreferrer"
+                                class="text-white/80 hover:text-white transition-colors">
+                                <span class="sr-only">Facebook</span>
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/redpen.comms/?hl=en" target="_blank"
+                                rel="noopener noreferrer" class="text-white/80 hover:text-white transition-colors">
+                                <span class="sr-only">Instagram</span>
+                                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2C8.49 2 7.97 2.01 6.98 2.05c-1.01.04-1.64.23-2.22.46-.6.24-1.1.58-1.59 1.07-.49.49-.83.99-1.07 1.59-.23.58-.42 1.21-.46 2.22-.04.99-.05 1.51-.05 5.01s.01 4.02.05 5.01c.04 1.01.23 1.64.46 2.22.24.6.58 1.1 1.07 1.59.49.49.99.83 1.59 1.07.58.23 1.21.42 2.22.46.99.04 1.51.05 5.01.05s4.02-.01 5.01-.05c1.01-.04 1.64-.23 2.22-.46.6-.24 1.1-.58 1.59-1.07.49-.49.83-.99 1.07-1.59.23-.58.42-1.21.46-2.22.04-.99.05-1.51.05-5.01s-.01-4.02-.05-5.01c-.04-1.01-.23-1.64-.46-2.22-.24-.6-.58-1.1-1.07-1.59-.49-.49-.99-.83-1.59-1.07-.58-.23-1.21-.42-2.22-.46-.99-.04-1.51-.05-5.01-.05zm0 2.16c3.2 0 3.58.01 4.85.05 1.1.04 1.79.22 2.22.39.47.18.8.39 1.16.75.36.36.57.69.75 1.16.17.43.35 1.12.39 2.22.04 1.27.05 1.65.05 4.85s-.01 3.58-.05 4.85c-.04 1.1-.22 1.79-.39 2.22-.18.47-.39.8-.75 1.16-.36.36-.69.57-1.16.75-.43.17-1.12.35-2.22.39-1.27.04-1.65.05-4.85.05s-3.58-.01-4.85-.05c-1.1-.04-1.79-.22-2.22-.39-.47-.18-.8-.39-1.16-.75-.36-.36-.57-.69-.75-1.16-.17-.43-.35-1.12-.39-2.22-.04-1.27-.05-1.65-.05-4.85s.01-3.58.05-4.85c.04-1.1.22-1.79.39-2.22.18-.47.39-.8.75-1.16.36-.36.69-.57 1.16-.75.43-.17 1.12-.35 2.22-.39 1.27-.04 1.65-.05 4.85-.05zm0 3.6c-2.42 0-4.38 1.96-4.38 4.38s1.96 4.38 4.38 4.38 4.38-1.96 4.38-4.38-1.96-4.38-4.38-4.38zm0 7.16c-1.53 0-2.78-1.25-2.78-2.78s1.25-2.78 2.78-2.78 2.78 1.25 2.78 2.78-1.25 2.78-2.78 2.78zm6.4-8.58c0 .58-.47 1.05-1.05 1.05s-1.05-.47-1.05-1.05.47-1.05 1.05-1.05 1.05.47 1.05 1.05z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -324,7 +412,7 @@
                     <p class="text-sm text-white/80">© 2025 RedPen Comms. All rights reserved.</p>
                 </div>
 
-                
+
                 <nav class="flex space-x-6">
                     <a href="index.html" class="text-white/80 hover:text-white transition-colors text-sm">Home</a>
                     <a href="about.html" class="text-white/80 hover:text-white transition-colors text-sm">About</a>
@@ -334,7 +422,8 @@
             </div>
         </div>
     </footer>
-     <!-- Local JS (relative path) -->
-  <script src="/js/script.js" defer></script>
+    <!-- Local JS (relative path) -->
+    <script src="/js/script.js" defer></script>
 </body>
+
 </html>

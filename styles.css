@@ -1,46 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+    --color-red: #FF2B2B;
+    --color-ink: #111111;
+    --color-muted: #6B7280;
+
+    --font-heading: "Orbin black ITC TT", sans-serif;
+    --font-body: Inter, Arial, sans-serif;
+}
+
 @font-face {
-    font-family: 'Orbin black ITC TT'; /* Choose a name for your font */
-    src: url('/assets/fonts/OrbinBlackITCTT.woff2') format('woff2'), /* Path to your WOFF2 file */
-         url('/assets/fonts/OrbinBlackITCTT.woff') format('woff'),   /* Path to your WOFF file */
-         url('/assets/fonts/OrbinBlackITCTT.ttf') format('truetype'); /* Path to your TTF file */
-    font-weight: normal; /* Or specify the weight, e.g., 400, 700 */
+    font-family: 'Orbin black ITC TT';
+    src: url('/assets/fonts/OrbinBlackITCTT.woff2') format('woff2'),
+        url('/assets/fonts/OrbinBlackITCTT.woff') format('woff'),
+        url('/assets/fonts/OrbinBlackITCTT.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Ensures text remains visible during font load */
+    font-display: swap;
 }
 
-/* Design Tokens */
-:root {
-    --red: #FF2B2B;
-    --white: #FFFFFF;
-    --ink: #111111;
-    --muted: #6B7280;
-    --font-heading: 'Orbin black ITC TT', sans-serif;
-    --font-body: 'Inter', Arial, sans-serif;
+/* Layer directives to override base styles if needed, though Tailwind config handles most */
+@layer base {
+    body {
+        font-family: var(--font-body);
+        color: var(--color-ink);
+        @apply antialiased;
+
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+        line-height: 1.2;
+    }
 }
 
-/* Configure Tailwind with custom colors */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Base Typography */
-body {
-    font-family: var(--font-body);
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    line-height: 1.2;
-}
-
-/* Custom Tailwind Classes */
-.text-red { color: var(--red); }
-.bg-red { background-color: var(--red); }
-.border-red { border-color: var(--red); }
-.text-ink { color: var(--ink); }
-.bg-ink { background-color: var(--ink); }
-.text-muted { color: var(--muted); }
 
 /* Container */
 .container {
@@ -63,8 +61,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Button Styles */
 .btn-primary {
-    background-color: var(--red);
-    color: var(--white);
+    background-color: var(--color-red);
+    color: white;
     border-radius: 9999px;
     min-height: 44px;
     font-weight: 700;
@@ -73,12 +71,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-    background-color: color-mix(in srgb, var(--red) 90%, black);
+    background-color: color-mix(in srgb, var(--color-red) 90%, black);
 }
 
 .btn-secondary {
-    border: 2px solid var(--red);
-    color: var(--red);
+    border: 2px solid var(--color-red);
+    color: var(--color-red);
     border-radius: 9999px;
     min-height: 44px;
     font-weight: 700;
@@ -87,13 +85,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-    background-color: var(--red);
-    color: var(--white);
+    background-color: var(--color-red);
+    color: white;
 }
 
 /* Focus States */
 *:focus-visible {
-    outline: 2px solid var(--red);
+    outline: 2px solid var(--color-red);
     outline-offset: 2px;
 }
 
@@ -107,7 +105,7 @@ html {
     html {
         scroll-behavior: auto;
     }
-    
+
     *,
     *::before,
     *::after {
@@ -120,7 +118,7 @@ html {
 
 /* Background Image Fallbacks */
 .why-choose-bg {
-    background-image: linear-gradient(135deg, var(--ink) 0%, var(--red) 100%);
+    background-image: linear-gradient(135deg, var(--color-ink) 0%, var(--color-red) 100%);
 }
 
 /* Mobile Menu Animation */
@@ -142,7 +140,7 @@ html {
 
 /* Case Study Overlay */
 .case-study-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 /* Client Logo Effects */

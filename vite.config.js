@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   base: '/',
+  plugins: [
+    tailwindcss(),
+  ],
   build: {
     rollupOptions: {
       input: {
@@ -12,7 +16,7 @@ export default defineConfig({
         brandDesign: resolve(__dirname, 'brand-design.html'),
         eventmarketing: resolve(__dirname, 'event-marketing.html'),
         photography: resolve(__dirname, 'photography.html')
-                             
+
       }
     }
   },
