@@ -24,7 +24,8 @@
     body {
         font-family: var(--font-body);
         color: var(--color-ink);
-        @apply antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
     }
 
@@ -162,4 +163,61 @@ html {
 
 .horizontal-scroll::-webkit-scrollbar {
     display: none;
+}
+
+/* Team Marquee Animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+    /* Ensure hardware acceleration for smooth scrolling */
+    will-change: transform;
+}
+
+/* Pause animation on hover / focus for accessibility */
+.animate-marquee:hover,
+.animate-marquee:focus-within {
+    animation-play-state: paused;
+}
+
+@media (min-width: 768px) {
+    .animate-marquee {
+        animation: none;
+        transform: none !important;
+        width: auto !important;
+        /* Reset width to auto for grid */
+    }
+
+
+    .team-clone {
+        display: none !important;
+    }
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
 }

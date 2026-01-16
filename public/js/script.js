@@ -1,3 +1,27 @@
+// Preloader
+window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Minimum time to show preloader (in milliseconds) to let GIF finish
+        // GIF is approx 7 seconds
+        const minDisplayTime = 7000;
+
+        // Calculate time elapsed since page load started
+        const loadTime = performance.now();
+
+        // precise wait time needed
+        const waitTime = Math.max(0, minDisplayTime - loadTime);
+
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            // Remove from DOM after transition
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }, waitTime);
+    }
+});
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -131,5 +155,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Change background every 7 seconds
         setInterval(updateHeroBackground, 7000);
+    }
+
+    // Team Members Marquee (Mobile)
+    const teamTrack = document.getElementById('team-track');
+    if (teamTrack) {
+        // Clone children for infinite scroll
+        const teamMembers = Array.from(teamTrack.children);
+        teamMembers.forEach(member => {
+            const clone = member.cloneNode(true);
+            clone.classList.add('team-clone');
+            clone.setAttribute('aria-hidden', 'true'); // Hide from screen readers to avoid duplication
+            teamTrack.appendChild(clone);
+        });
     }
 });
