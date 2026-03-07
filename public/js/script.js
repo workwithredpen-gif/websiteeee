@@ -25,50 +25,57 @@ window.addEventListener('load', function () {
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuCloseButton = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
     const header = document.getElementById('header');
 
-    // Mobile menu toggle
+    // Function to open the mobile menu overlay
+    const openMobileMenu = () => {
+        if (!mobileMenu) return;
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-full');
+        mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'true');
+
+        // Prevent background scrolling when menu is open
+        document.body.style.overflow = 'hidden';
+    };
+
+    // Function to close the mobile menu overlay
+    const closeMobileMenu = () => {
+        if (!mobileMenu) return;
+        mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-full');
+        if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'false');
+
+        // Restore background scrolling
+        document.body.style.overflow = '';
+    };
+
+    // Open button logic
     if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function () {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+    }
 
-            // Toggle menu visibility
-            mobileMenu.classList.toggle('hidden');
+    // Close button logic
+    if (mobileMenuCloseButton && mobileMenu) {
+        mobileMenuCloseButton.addEventListener('click', closeMobileMenu);
+    }
 
-            // Update aria-expanded
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-
-            // Add animation class
-            if (!isExpanded) {
-                mobileMenu.classList.add('mobile-menu-enter');
-                setTimeout(() => {
-                    mobileMenu.classList.add('mobile-menu-enter-active');
-                }, 10);
-            } else {
-                mobileMenu.classList.remove('mobile-menu-enter', 'mobile-menu-enter-active');
-            }
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function (event) {
-            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-                mobileMenu.classList.remove('mobile-menu-enter', 'mobile-menu-enter-active');
-            }
-        });
-
-        // Close mobile menu on escape key
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-                mobileMenu.classList.remove('mobile-menu-enter', 'mobile-menu-enter-active');
-                mobileMenuButton.focus();
-            }
+    // Optional: Close when clicking any link inside the mobile menu
+    if (mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
         });
     }
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('opacity-100')) {
+            closeMobileMenu();
+            if (mobileMenuButton) mobileMenuButton.focus();
+        }
+    });
 
     // Header shadow on scroll
     if (header) {
@@ -81,29 +88,67 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Smooth anchor scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+    // Initialize Lenis for Smooth Scrolling
+    const initLenis = () => {
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/lenis@1.1.20/dist/lenis.min.js';
+        script.onload = () => {
+            const lenis = new Lenis({
+                autoRaf: true,
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                smoothTouch: false,
+                touchMultiplier: 2,
+            });
 
-            if (target) {
-                // Check for reduced motion preference
-                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            // Re-implement Smooth anchor scrolling using Lenis
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId && targetId !== '#') {
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            e.preventDefault();
+                            lenis.scrollTo(target);
 
-                target.scrollIntoView({
-                    behavior: prefersReducedMotion ? 'auto' : 'smooth',
-                    block: 'start'
+                            // Close mobile menu if open
+                            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                                mobileMenu.classList.add('hidden');
+                                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                            }
+                        }
+                    }
                 });
+            });
+        };
+        document.head.appendChild(script);
+    };
 
-                // Close mobile menu if open
-                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+    // Only init if not user prefers reduced motion
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        initLenis();
+    } else {
+        // Fallback for native smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'auto', block: 'start' });
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        }
+                    }
                 }
-            }
+            });
         });
-    });
+    }
 
     // Focus management for accessibility
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';

@@ -96,10 +96,6 @@
     outline-offset: 2px;
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
 
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
@@ -122,17 +118,7 @@ html {
     background-image: linear-gradient(135deg, var(--color-ink) 0%, var(--color-red) 100%);
 }
 
-/* Mobile Menu Animation */
-.mobile-menu-enter {
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-.mobile-menu-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
+/* Mobile Menu Animation (Now handled by Tailwind utility classes in HTML) */
 
 /* Service Card Hover Effects */
 .service-card:hover {
@@ -142,6 +128,16 @@ html {
 /* Case Study Overlay */
 .case-study-overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Hide Scrollbar Utility */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Client Logo Effects */
