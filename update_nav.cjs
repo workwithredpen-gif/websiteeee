@@ -80,7 +80,7 @@ files.forEach(file => {
     // Check if it's one of the service pages, then make the "Services" button active
     const services = ["event-marketing.html", "brand-design.html", "web-development.html", "photography.html", "portraits.html", "advertising.html", "marketing.html", "events.html", "commercial.html", "lifestyle.html"];
     if (services.includes(file)) {
-        content = content.replace(/<button class="nav-link text-lg text-ink/, '<button class="nav-link text-lg text-red');
+        content = content.replace(/(<button class="nav-link text-lg )text-ink/, '$1text-red');
     }
 
     fs.writeFileSync(file, content);
