@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Shoots Photography — RedPen Comms</title>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tailwind (optional CDN) -->
+
+
+  <!-- Favicon (relative path) -->
+  <link rel="icon" href="assets/myfavicon.png" type="image/png" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="RedPen Comms - Imagine | Experience | Remember. We create campaigns and craft experiences that resonate. Get Seen. Get Heard. Get Known. Get Remembered.">
+  <meta name="keywords" content="Communications, PR, Marketing, Branding, Event Management, Photography, RedPen Comms">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RedPen Comms">
+  <meta property="og:description"
+    content="RedPen Comms - Imagine | Experience | Remember. We create campaigns and craft experiences that resonate.">
+  <meta property="og:image"
+    content="https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1767719799/hero-image_h8u9vj.jpg">
+  <meta property="og:url" content="https://www.redpencomms.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MJ62ZD74N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0MJ62ZD74N');
+  </script>
+</head>
+
+<body class="bg-white text-ink">
+
+  <!-- Header -->
+  <header id="header" class="sticky top-0 bg-white z-50 transition-shadow duration-300">
+    <div class="container mx-auto px-4 md:px-8 py-0">
+      <div class="flex items-center justify-between relative h-20">
+        <div class="absolute left-0 top-1/2 -translate-y-1/2">
+          <a href="index.html">
+            <img src="assets/redpencomms-logo.png" alt="RedPen Comms Logo" class="h-40 w-auto">
+          </a>
+        </div>
+
+        <nav class="hidden md:flex space-x-6 lg:space-x-8 ml-auto items-center">
+          <a href="index.html" class="nav-link text-base text-ink hover:text-red transition-colors font-medium">Home</a>
+
+          <!-- Photography Dropdown -->
+          <div class="relative group">
+            <a href="photography.html"
+              class="nav-link text-base text-ink hover:text-red transition-colors font-medium flex items-center gap-1 py-4">
+              Photography
+              <svg class="w-4 h-4 mt-0.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <div
+              class="absolute top-[80%] right-0 mt-2 w-48 bg-white rounded-xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 flex flex-col z-100">
+              <div class="absolute -top-4 left-0 w-full h-4 bg-transparent"></div>
+              <a href="photography.html"
+                class="block px-4 py-2 text-base text-ink font-semibold hover:bg-red hover:text-white transition-colors">View
+                All</a>
+              <a href="corporate-shots.html"
+                class="block px-4 py-2 text-base text-ink hover:bg-red hover:text-white transition-colors">Corporate
+                Shots</a>
+              <a href="event-shoots.html"
+                class="block px-4 py-2 text-base text-ink hover:bg-red hover:text-white transition-colors">Event
+                Shoots</a>
+              <a href="graduation.html"
+                class="block px-4 py-2 text-base text-ink hover:bg-red hover:text-white transition-colors">Graduation</a>
+              <a href="product-shoot.html"
+                class="block px-4 py-2 text-base text-ink hover:bg-red hover:text-white transition-colors">Product
+                Shoot</a>
+            </div>
+          </div>
+
+          <!-- Top-level service links -->
+          <a href="brand-design.html"
+            class="nav-link text-base text-ink hover:text-red transition-colors font-medium">Brand Design</a>
+          <a href="web-development.html"
+            class="nav-link text-base text-ink hover:text-red transition-colors font-medium">Web Development</a>
+          <a href="event-marketing.html"
+            class="nav-link text-base text-ink hover:text-red transition-colors font-medium">Event Marketing</a>
+          <a href="about.html"
+            class="nav-link text-base text-ink hover:text-red transition-colors font-medium">About</a>
+          <a href="contact.html"
+            class="nav-link text-base text-ink hover:text-red transition-colors font-medium">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button"
+          class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors relative z-10 ml-auto"
+          aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <!-- Mobile Navigation Overlay (Full Screen) -->
+      <!-- Mobile Navigation Overlay (Full Screen) -->
+      <nav id="mobile-menu"
+        class="fixed inset-0 z-100 bg-red text-white flex flex-col opacity-0 pointer-events-none transform -translate-y-full transition-all duration-500">
+
+        <!-- Header (Logo & Close) -->
+        <div class="container mx-auto px-4 md:px-8 py-0 flex items-center justify-between h-20 relative">
+          <a href="index.html" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-fit">
+            <img src="assets/redpencomms-logo-white.png" alt="RedPen Comms Logo" class="h-40 w-auto">
+          </a>
+
+          <button id="mobile-menu-close"
+            class="p-2 rounded-lg hover:bg-white/10 transition-colors relative z-10 ml-auto"
+            aria-label="Close navigation menu">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Main Links (Centered) -->
+        <div class="flex-1 flex flex-col justify-center items-center space-y-4 md:space-y-6 mt-4">
+          <a href="index.html"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider hover:text-white/70 transition-colors">Home</a>
+          <a href="photography.html"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider hover:text-white/70 transition-colors">Photography</a>
+          <a href="brand-design.html"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider hover:text-white/70 transition-colors">Brand
+            Design</a>
+          <a href="web-development.html"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider hover:text-white/70 transition-colors">Web
+            Development</a>
+          <a href="event-marketing.html"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider hover:text-white/70 transition-colors">Event
+            Marketing</a>
+          <a href="about.html"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider hover:text-white/70 transition-colors">About</a>
+          <a href="contact.html"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider hover:text-white/70 transition-colors">Contact</a>
+        </div>
+
+        <!-- Footer (Socials & Copyright) -->
+        <div class="pb-8 pt-4 container mx-auto px-4 text-center">
+          <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://instagram.com" target="_blank" class="hover:text-white/70 transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"></path>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="hover:text-white/70 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z" />
+              </svg>
+            </a>
+          </div>
+          <p class="text-sm font-medium tracking-wide">All rights reserved RedPen Comms.</p>
+        </div>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-16 bg-gray-50 text-center">
+    <h1 class="text-4xl font-bold mb-4">Event Shoots</h1>
+    <p class="text-lg text-gray-600 px-4">Capturing moments from your events.</p>
+  </section>
+
+  <!-- Gallery -->
+
+  <section class="py-16 container mx-auto px-4">
+    <div class="space-y-4">
+      <!-- Row 1: 4 images -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963880/_MG_0298.jpg_ecb6ij.jpg"
+            alt="Event Shoots 1"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963868/_MG_0163.jpg_mrypwz.jpg"
+            alt="Event Shoots 2"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963862/_MG_0172.jpg_gidb4t.jpg"
+            alt="Event Shoots 3"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img
+            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963853/Corporate_shoot_with_Akaya_Foundation_at_britishcouncilgh._corporateshoot_eventshoot_eventph_1.jpg_rzdwpf.jpg"
+            alt="Event Shoots 4"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: 1 full-width image -->
+      <div
+        class="relative group block h-64 md:h-96 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+        <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772964046/IMG_8378.jpg_pvhnws.jpg"
+          alt="Event Shoots 5"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div
+          class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+          <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Row 3: 4 images -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963868/_MG_0143_1.jpg_cg1w4c.jpg"
+            alt="Event Shoots 6"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963872/_MG_0150.jpg_itemb4.jpg"
+            alt="Event Shoots 7"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963876/_MG_0124.jpg_kkctjq.jpg"
+            alt="Event Shoots 8"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img
+            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963853/Corporate_shoot_with_Akaya_Foundation_at_britishcouncilgh._corporateshoot_eventshoot_eventph.jpg_sgrf1g.jpg"
+            alt="Event Shoots 9"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: 1 full-width image -->
+      <div
+        class="relative group block h-64 md:h-96 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+        <img
+          src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963855/Yango_Gh_in_collaboration_with_Standout_Care_organizes_health_screening_for_a_yango_Drivers.Rate.jpg_mjmrxd.jpg"
+          alt="Event Shoots 10"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div
+          class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+          <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Row 5: 3 images remaining -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img
+            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963854/Corporate_shoot_with_Akaya_Foundation_at_britishcouncilgh._corporateshoot_eventshoot_eventph_2.jpg_wxtapn.jpg"
+            alt="Event Shoots 11"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img
+            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963854/Check_out_some_reaction_shots_from_TEMA_FLOURISH_TOASTMASTERS_CLUB.Which_one_is_your_favorite_fr_1.jpg_pjks1d.jpg"
+            alt="Event Shoots 12"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative group block h-64 overflow-hidden rounded-xl shadow-md cursor-pointer lightbox-trigger">
+          <img
+            src="https://res.cloudinary.com/dja3u7oha/image/upload/v1772963853/Check_out_some_reaction_shots_from_TEMA_FLOURISH_TOASTMASTERS_CLUB.Which_one_is_your_favorite_fr.jpg_b7bdwf.jpg"
+            alt="Event Shoots 13"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer band -->
+  <section class="bg-red text-white py-12">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">About</h3>
+          <p class="text-white/90">
+            We are a creative digital agency that helps brands get seen, heard, and remembered through strategic
+            marketing and compelling visual storytelling.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Get in Touch</h3>
+          <div class="space-y-2 text-white/90">
+            <p>📧 workwithredpen@gmail.com</p>
+            <p>📞 +233 20 578 9341</p>
+            <p>📞 <a href="tel:+233548578655" class="text-white/90 hover:text-white transition-colors">+233 54 857
+                8655</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-white py-8">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="flex items-center space-x-4">
+          <img src="assets/footer-image.png" alt="RedPen Comms Logo" class="h-12 w-12">
+          <p class="text-sm text-white/80">© 2026 RedPen Comms. All rights reserved.</p>
+        </div>
+
+        <nav class="flex space-x-6">
+          <a href="index.html" class="text-white/80 hover:text-white transition-colors text-sm">Home</a>
+          <a href="about.html" class="text-white/80 hover:text-white transition-colors text-sm">About</a>
+          <a href="contact.html" class="text-white/80 hover:text-white transition-colors text-sm">Contact</a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Privacy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Local JS (relative path) -->
+  <script src="/js/script.js" defer></script>
+
+  <!-- Lightbox -->
+  <div id="lightbox"
+    class="fixed inset-0 z-100 bg-black/98 hidden flex-col items-center justify-center transition-opacity duration-300 opacity-0">
+    <button id="lightbox-close"
+      class="absolute top-6 right-6 text-white hover:text-red transition-colors p-2 z-110 bg-black/50 rounded-full">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <div id="lightbox-img-container"
+      class="relative w-full h-[85vh] flex items-center justify-center overflow-auto cursor-zoom-in py-8">
+      <img id="lightbox-img" src="" alt="Zoomed Graphic"
+        class="max-w-full max-h-full object-contain transition-transform duration-300 origin-center scale-100 shadow-2xl">
+    </div>
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 text-white z-110">
+      <button id="zoom-in"
+        class="bg-black/80 hover:bg-red p-3 rounded-full backdrop-blur-sm border border-white/20 transition-all hover:scale-110"
+        aria-label="Zoom in">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+        </svg>
+      </button>
+      <button id="zoom-out"
+        class="bg-black/80 hover:bg-red p-3 rounded-full backdrop-blur-sm border border-white/20 transition-all hover:scale-110"
+        aria-label="Zoom out">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</body>
+
+</html>
