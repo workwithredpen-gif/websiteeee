@@ -21,12 +21,6 @@ export default defineConfig({
         eventShoots: resolve(__dirname, 'event-shoots.html'),
         graduation: resolve(__dirname, 'graduation.html'),
         productShoot: resolve(__dirname, 'product-shoot.html'),
-        portraits: resolve(__dirname, 'portraits.html'),
-        advertising: resolve(__dirname, 'advertising.html'),
-        marketing: resolve(__dirname, 'marketing.html'),
-        events: resolve(__dirname, 'events.html'),
-        commercial: resolve(__dirname, 'commercial.html'),
-        lifestyle: resolve(__dirname, 'lifestyle.html'),
       }
     }
   },
