@@ -2,6 +2,12 @@
 window.addEventListener('load', function () {
     const preloader = document.getElementById('preloader');
     if (preloader) {
+        // Check if preloader has already played in this session
+        if (sessionStorage.getItem('preloaderPlayed')) {
+            preloader.style.display = 'none';
+            return;
+        }
+
         // Minimum time to show preloader (in milliseconds) to let GIF finish
         // GIF is approx 7 seconds
         const minDisplayTime = 7000;
@@ -14,6 +20,7 @@ window.addEventListener('load', function () {
 
         setTimeout(() => {
             preloader.classList.add('fade-out');
+            sessionStorage.setItem('preloaderPlayed', 'true');
             // Remove from DOM after transition
             setTimeout(() => {
                 preloader.style.display = 'none';
@@ -21,6 +28,24 @@ window.addEventListener('load', function () {
         }, waitTime);
     }
 });
+
+// Active Link Indicator
+function initActiveLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        // Handle index.html and root path
+        if ((currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/')) && (href === 'index.html' || href === '/')) {
+            link.classList.add('active-nav-link');
+        } else if (href && currentPath.includes(href) && href !== 'index.html' && href !== '/') {
+            link.classList.add('active-nav-link');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initActiveLink);
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function () {

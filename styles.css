@@ -60,6 +60,15 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+/* Nav Link Underline */
+.active-nav-link {
+    border-bottom: 2px solid var(--color-red);
+}
+
+.mobile-menu-logo {
+    filter: brightness(0) invert(1);
+}
+
 /* Button Styles */
 .btn-primary {
     background-color: var(--color-red);
