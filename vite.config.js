@@ -21,6 +21,7 @@ export default defineConfig({
         eventShoots: resolve(__dirname, 'event-shoots.html'),
         graduation: resolve(__dirname, 'graduation.html'),
         productShoot: resolve(__dirname, 'product-shoot.html'),
+        ngoPhotography: resolve(__dirname, 'ngo-photography.html'),
       }
     }
   },
