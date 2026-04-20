@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const script = document.createElement('script');
         script.src = 'https://unpkg.com/lenis@1.1.20/dist/lenis.min.js';
         script.onload = () => {
-            const lenis = new Lenis({
+            window.lenis = new Lenis({
                 autoRaf: true,
                 duration: 1.2,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         const target = document.querySelector(targetId);
                         if (target) {
                             e.preventDefault();
-                            lenis.scrollTo(target);
+                            window.lenis.scrollTo(target);
 
                             // Close mobile menu if open
                             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         document.head.appendChild(script);
     };
+
 
     // Only init if not user prefers reduced motion
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -321,4 +322,94 @@ document.addEventListener('DOMContentLoaded', function () {
             }, { passive: false });
         }
     }
-});
+
+    // Case Study Viewer Logic (Long Scroll)
+    const caseStudies = {
+        'brand-v1': [
+            'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544598/Artboard_1.jpg_rabsux.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544597/Artboard_1_copy_2.jpg_junpte.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544598/Artboard_1_copy_4.jpg_sgokda.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544599/Artboard_1_copy_5.jpg_omxien.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544597/Artboard_30_copy_7.jpg_smd0v9.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544597/Artboard_31.jpg_ffcqls.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544599/Artboard_31_copy_2.jpg_ej33cf.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544598/Artboard_31_copy.jpg_pxkg75.jpg'
+        ]
+    };
+
+    const caseStudyOverlay = document.getElementById('case-study-overlay');
+    const caseStudyContainer = document.getElementById('case-study-container');
+    const caseStudyClose = document.getElementById('case-study-close');
+
+    if (caseStudyOverlay && caseStudyContainer) {
+        const openCaseStudy = (studyId) => {
+            const images = caseStudies[studyId];
+            if (!images) return;
+
+            // Stop Lenis to allow native scrolling in overlay
+            if (window.lenis) window.lenis.stop();
+
+            // Clear container
+            caseStudyContainer.innerHTML = '';
+
+            // Add images
+            images.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = 'Case Study Image';
+                img.loading = 'lazy';
+                img.className = 'w-full h-auto rounded-lg shadow-2xl mb-8 md:mb-12';
+                caseStudyContainer.appendChild(img);
+            });
+
+            // Show overlay
+            caseStudyOverlay.classList.remove('hidden');
+            caseStudyOverlay.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(() => {
+                caseStudyOverlay.classList.remove('opacity-0');
+            }, 10);
+        };
+
+        const closeCaseStudy = () => {
+            caseStudyOverlay.classList.add('opacity-0');
+            document.body.style.overflow = '';
+            
+            // Resume Lenis
+            if (window.lenis) window.lenis.start();
+            
+            setTimeout(() => {
+                caseStudyOverlay.classList.remove('flex');
+                caseStudyOverlay.classList.add('hidden');
+                caseStudyContainer.innerHTML = '';
+            }, 300);
+        };
+
+
+        document.querySelectorAll('.case-study-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const studyId = trigger.getAttribute('data-case-study');
+                openCaseStudy(studyId);
+            });
+        });
+
+        if (caseStudyClose) {
+            caseStudyClose.addEventListener('click', closeCaseStudy);
+        }
+
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !caseStudyOverlay.classList.contains('hidden')) {
+                closeCaseStudy();
+            }
+        });
+
+        // Close on background click
+        caseStudyOverlay.addEventListener('click', (e) => {
+            if (e.target === caseStudyOverlay) {
+                closeCaseStudy();
+            }
+        });
+    }
+});
