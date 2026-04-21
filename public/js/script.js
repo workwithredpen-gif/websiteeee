@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         const target = document.querySelector(targetId);
                         if (target) {
                             e.preventDefault();
-                            window.lenis.scrollTo(target);
+                            if (window.lenis) window.lenis.scrollTo(target);
 
                             // Close mobile menu if open
                             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
@@ -151,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         document.head.appendChild(script);
     };
-
 
     // Only init if not user prefers reduced motion
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -334,6 +333,16 @@ document.addEventListener('DOMContentLoaded', function () {
             'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544597/Artboard_31.jpg_ffcqls.jpg',
             'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544599/Artboard_31_copy_2.jpg_ej33cf.jpg',
             'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544598/Artboard_31_copy.jpg_pxkg75.jpg'
+        ],
+        'brand-v2': [
+            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732934/Artboard_1_y1kixc.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732927/Artboard_1_copy_1_uqxe3u.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732926/Artboard_1_copy_4_rhsrcw.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732923/Artboard_1_copy_5_grrnh6.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732923/Artboard_1_copy_9_i8cxpj.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732926/Artboard_1_copy_12_omaq4v.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732926/Artboard_1_copy_13_wez2oa.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732930/Artboard_1_copy_17_m9vgxy.png'
         ]
     };
 
@@ -346,8 +355,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const images = caseStudies[studyId];
             if (!images) return;
 
-            // Stop Lenis to allow native scrolling in overlay
+            // Stop Lenis and lock scroll
             if (window.lenis) window.lenis.stop();
+            document.body.classList.add('no-scroll');
+            document.documentElement.classList.add('no-scroll');
 
             // Clear container
             caseStudyContainer.innerHTML = '';
@@ -364,8 +375,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Show overlay
             caseStudyOverlay.classList.remove('hidden');
-            caseStudyOverlay.classList.add('flex');
-            document.body.style.overflow = 'hidden';
+            caseStudyOverlay.classList.add('block');
 
             setTimeout(() => {
                 caseStudyOverlay.classList.remove('opacity-0');
@@ -374,18 +384,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const closeCaseStudy = () => {
             caseStudyOverlay.classList.add('opacity-0');
-            document.body.style.overflow = '';
             
-            // Resume Lenis
+            // Resume Lenis and unlock scroll
             if (window.lenis) window.lenis.start();
+            document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
             
             setTimeout(() => {
-                caseStudyOverlay.classList.remove('flex');
+                caseStudyOverlay.classList.remove('block');
                 caseStudyOverlay.classList.add('hidden');
                 caseStudyContainer.innerHTML = '';
             }, 300);
         };
-
 
         document.querySelectorAll('.case-study-trigger').forEach(trigger => {
             trigger.addEventListener('click', () => {
@@ -412,4 +422,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});
+});
+

@@ -227,6 +227,12 @@
     visibility: hidden;
 }
 
+/* Utility to lock scroll */
+.no-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
+
 /* Case Study Overlay Styles */
 #case-study-overlay img {
     width: 100%;
@@ -238,9 +244,10 @@
     overscroll-behavior: contain;
 }
 
-#case-study-overlay.flex {
-    display: flex;
+#case-study-overlay.block {
+    display: block;
 }
+
 
 
 .case-study-trigger:hover img {
