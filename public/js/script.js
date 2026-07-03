@@ -335,23 +335,23 @@ document.addEventListener('DOMContentLoaded', function () {
             'https://res.cloudinary.com/dja3u7oha/image/upload/q_auto/f_auto/v1776544598/Artboard_31_copy.jpg_pxkg75.jpg'
         ],
         'brand-v2': [
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732934/Artboard_1_y1kixc.png',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732927/Artboard_1_copy_1_uqxe3u.png',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732926/Artboard_1_copy_4_rhsrcw.png',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732923/Artboard_1_copy_5_grrnh6.png',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732923/Artboard_1_copy_9_i8cxpj.png',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732926/Artboard_1_copy_12_omaq4v.png',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732926/Artboard_1_copy_13_wez2oa.png',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776732930/Artboard_1_copy_17_m9vgxy.png'
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776732934/Artboard_1_y1kixc.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776732927/Artboard_1_copy_1_uqxe3u.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776732926/Artboard_1_copy_4_rhsrcw.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776732923/Artboard_1_copy_5_grrnh6.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776732923/Artboard_1_copy_9_i8cxpj.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776732926/Artboard_1_copy_12_omaq4v.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776732926/Artboard_1_copy_13_wez2oa.png',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776732930/Artboard_1_copy_17_m9vgxy.png'
         ],
         'brand-v3': [
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776954782/Artboard_1_copy.jpg_vcgluo.jpg',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776954782/Artboard_1.jpg_xgvrjr.jpg',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776954782/Artboard_1_copy_4.jpg_xcabf2.jpg',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776954783/Artboard_1_copy_2.jpg_muxdje.jpg',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776954782/Artboard_1_copy_3.jpg_fku1o4.jpg',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776954782/Artboard_1_copy_6.jpg_q6dm05.jpg',
-            'https://res.cloudinary.com/dja3u7oha/image/upload/v1776954782/Artboard_1_copy_5.jpg_vefsqr.jpg'
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776954782/Artboard_1_copy.jpg_vcgluo.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776954782/Artboard_1.jpg_xgvrjr.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776954782/Artboard_1_copy_4.jpg_xcabf2.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776954783/Artboard_1_copy_2.jpg_muxdje.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776954782/Artboard_1_copy_3.jpg_fku1o4.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776954782/Artboard_1_copy_6.jpg_q6dm05.jpg',
+            'https://res.cloudinary.com/dja3u7oha/image/upload/f_auto,q_auto/v1776954782/Artboard_1_copy_5.jpg_vefsqr.jpg'
         ]
 
     };
